@@ -96,7 +96,7 @@ export class VerticalScrollView extends React.Component<PropType> {
       iconColor: '#fff',
       titleColor: '#fff',
       iconName: 'arrow-upward',
-      refreshTitle: ['Drag up to load more data', 'Release to load more data', 'Loading...', 'Give up loading', 'Canceled', 'Load completed', 'No more data']
+      loadingTitle: ['Drag up to load more data', 'Release to load more data', 'Loading...', 'Give up loading', 'Canceled', 'Load completed', 'No more data']
     },
   };
 
