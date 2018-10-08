@@ -21,11 +21,11 @@ const ComponentIcon = Animated.createAnimatedComponent(Icon);
 
 export class NormalFooter extends LoadingFooter {
   render() {
-    const { titleColor, refreshTitle } = this.props;
+    const { titleColor, loadingTitle } = this.props;
     if (this.state.status === "allLoaded")
       return (
         <View style={styles.container}>
-          <Text style={{ color: titleColor }}>{refreshTitle[6]}</Text>
+          <Text style={{ color: titleColor }}>{loadingTitle[6]}</Text>
         </View>
       );
     return (
@@ -72,20 +72,20 @@ export class NormalFooter extends LoadingFooter {
   }
 
   _getTitle() {
-    const { refreshTitle } = this.props;
+    const { loadingTitle } = this.props;
     const s = this.state.status;
     if (s === "dragging" || s === "waiting") {
-      return refreshTitle[0];
+      return loadingTitle[0];
     } else if (s === "draggingEnough") {
-      return refreshTitle[1];
+      return loadingTitle[1];
     } else if (s === "loading") {
-      return refreshTitle[2];
+      return loadingTitle[2];
     } else if (s === "draggingCancel") {
-      return refreshTitle[3];
+      return loadingTitle[3];
     } else if (s === "cancelLoading") {
-      return refreshTitle[4];
+      return loadingTitle[4];
     } else if (s === "rebound") {
-      return refreshTitle[5];
+      return loadingTitle[5];
     }
   }
 }
